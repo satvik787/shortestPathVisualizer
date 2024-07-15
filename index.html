@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./index.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Shortest Path</title>
+</head>
+<body>
+    <img id="star" src="./assets/right-direction-2-svgrepo-com.svg" >
+    <img id="target" src="./assets/target-svgrepo-com(1).svg" >    
+    <div id="algo_menu"  class="hidden absolute left-[0.3%] top-10 z-10 mt-2 w-1/5  rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" >
+        <div class="py-1">
+          <button  class="block px-4 py-2 text-sm text-gray-700" id="algo_bfs">BFS</a>
+          <button  class="block px-4 py-2 text-sm text-gray-700" id="algo_dfs">DFS</a>
+          <!-- <button  class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2"></a> -->
+        </div>
+    </div>
+    <div  id="grid_menu"  class="hidden absolute left-[20.5%] top-10 z-10 mt-2 w-1/5  rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" >
+        <div class="py-1" >
+          <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+          <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+          <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+        </div>
+    </div>
+    <nav id="navbar" class="gap-x-2 p-2 w-full h-[100px] mb-[4px] bg-gray-800 grid grid-rows-2 grid-cols-[repeat(4,9.5%)_20%_repeat(3,12.6%)]">
+      <button id="algo_btn" class="col-start-1 col-end-3 inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" >
+          Algorithm 
+          <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+          </svg>
+      </button>
+      <button  id="grid_btn"  class="col-start-3 col-end-5  inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" >
+          Grid Dimensions
+          <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+          </svg>
+      </button>
+      <button id="btn_start" class="w-full rounded-md bg-cyan-500 row-start-1 row-end-3 col-start-5 col-end-6 hover:bg-cyan-600 font-sans text-4xl font-thin text-center text-orange-50 transition-transform duration-200 delay-100 ease-in  hover:scale-105 ">Start</button>
+      <button id="btn_clear_board" class="w-full rounded-md bg-gray-50 hover:bg-gray-200 col-start-6 col-end-7">
+        Clear Board
+      </button>
+      <button id="btn_clear_walls" class="w-full rounded-md bg-gray-50 hover:bg-gray-200 col-start-7 col-end-8">
+        Clear Walls
+      </button>
+      <button id="btn_clear_path" class="w-full rounded-md bg-gray-50 hover:bg-gray-200 col-start-8 col-end-9">
+        Clear Path
+      </button>
+    </nav>
+    <canvas id="canvas"></canvas>
+    <script type="module" src="./js/dist/index.js"></script>
+</body>
+</html>
